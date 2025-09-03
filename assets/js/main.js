@@ -144,7 +144,7 @@ document.querySelectorAll(".scroll_wrap").forEach((wrap) => {
           start: "top top",
           end: "bottom top",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         defaults: { ease: "none" },
       });
