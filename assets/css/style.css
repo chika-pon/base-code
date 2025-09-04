@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -998,26 +997,6 @@ select {
     background-color: #333;
     color: #fff;
   }
-}
-
-.c-btn__icon {
-  width: 1.6rem;
-  height: auto;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.c-btn:hover {
-  color: #fff;
-  /* ホバー時は白 */
-}
-
-.c-btn:hover .c-btn__icon {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-  /* 矢印だけ右に動く */
 }
 
 @media (min-width: 768px) {

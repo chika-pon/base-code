@@ -359,20 +359,3 @@
     }
   }
 }
-
-//svg矢印　色変更とアニメーション
-.c-btn__icon {
-  width: 1.6rem;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.c-btn:hover {
-  color: #fff;
-  /* ホバー時は白 */
-}
-
-.c-btn:hover .c-btn__icon {
-  transform: translateX(8px);
-  /* 矢印だけ右に動く */
-}
