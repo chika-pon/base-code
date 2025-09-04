@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- meta情報 -->
+  <title>Document</title>
+  <meta name="description" content="" />
+
+  <!-- ogp -->
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/svg+xml" />
+  <!-- <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" sizes="180x180">
+	  <link rel="icon" href="./assets/img/android-icon.png" sizes="192x192"> -->
+
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css?ver1.0" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <header class="p-header">
+    <div class="p-header__inner">
+      <a href="" class="p-header__logo">ロゴ</a>
+      <nav class="p-header__nav">
+        <ul class="p-header__list">
+          <li><a href="">トップ</a></li>
+          <li><a href="">私たちについて</a></li>
+          <li><a href="">サービス</a></li>
+        </ul>
+        <a href="" class="p-header__btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <button class="p-drawer__icon">
+    <div class="p-drawer__icon--bar"></div>
+    <div class="p-drawer__icon--bar"></div>
+    <div class="p-drawer__icon--bar"></div>
+  </button>
+
+  <div class="p-drawer">
+    <div class="p-drawer__body">
+      <ul class="p-drawer__list">
+        <li><a href="">トップ</a></li>
+        <li><a href="">私たちについて</a></li>
+        <li><a href="">サービス</a></li>
+      </ul>
+      <a href="" class="p-drawer__btn">お問い合わせ</a>
+    </div>
+  </div>
+
+
+
+  <main class="l-main">
+    <section class="p-works-slider  bg--orange">
+      <div class="p-works-slider__inner">
+        <div class="p-works-slide__container">
+          <div class="p-works-slider__side">
+            <h2 class="c-section__title--large p-works-slider__main-title">おすすめの<br>お仕事たち</h2>
+            <div class="p-works-slider__illust u-animation__jump --delay1">
+              <img src='https://sabeevo.com/wp-content/themes/sabeevo/assets/img/can-planning.svg'
+                alt='みんなでアイディアを出している様子のイラスト' width='336' height='375' loading='lazy'>
+            </div>
+          </div>
+          <div class="p-works-slider__main">
+            <div class="p-works-slider__swiper-container">
+              <div class="swiper p-works-slider__swiper js-swiper-recommend">
+                <div class="swiper-wrapper p-works-slider__swiper-wrapper">
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/67245/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2021/09/72.gif" alt="CHIMNEY TOWN Webサイト"
+                        width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #Webサイト #西野亮廣 </div>
+                    <div class="p-works-slider__title">CHIMNEY TOWN Webサイト</div>
+                  </a>
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/65895/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2021/02/30.jpg" alt="ANTONIO Tシャツデザイン"
+                        width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #山口トンボ #Tシャツ #グッズ </div>
+                    <div class="p-works-slider__title">ANTONIO Tシャツデザイン</div>
+                  </a>
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/63846/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2020/02/EPr7gV_U0AAMjpq.jpg"
+                        alt="ニガミ17才「幽霊であるし」ジャケットデザイン" width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #CDジャケット #ニガミ17才 </div>
+                    <div class="p-works-slider__title">ニガミ17才「幽霊であるし」ジャケットデザイン</div>
+                  </a>
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/61699/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2018/12/i_saitama.png"
+                        alt="岡崎体育「SAITAMA」ジャケットデザイン" width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #CDジャケット #岡崎体育 </div>
+                    <div class="p-works-slider__title">岡崎体育「SAITAMA」ジャケットデザイン</div>
+                  </a>
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/1298/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2017/12/pc_salonJP_1.png" alt="salon.jp. UI・UX"
+                        width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #UIUX #WEB #西野亮廣 </div>
+                    <div class="p-works-slider__title">salon.jp. UI・UX</div>
+                  </a>
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/996/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2017/06/report_i.png"
+                        alt="Official髭男dism「REPORT」ジャケットデザイン" width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #CDジャケット #Official髭男dism </div>
+                    <div class="p-works-slider__title">Official髭男dism「REPORT」ジャケットデザイン</div>
+                  </a>
+                  <a class="swiper-slide p-works-slider__swiper-slide" href="https://sabeevo.com/design/373/">
+                    <div class="p-works-slider__swiper-slide-img-wrap">
+                      <img src="https://sabeevo.com/wp-content/uploads/2016/03/hirosesuzu_artainouta-2-1.jpg"
+                        alt="「アイのうた J-POP NON STOP MIX2」ジャケットデザイン" width="330" height="330" loading="lazy">
+                    </div>
+                    <div class="p-works-slider__tag">
+                      #CDジャケット #フォトディレクション </div>
+                    <div class="p-works-slider__title">「アイのうた J-POP NON STOP MIX2」ジャケットデザイン</div>
+                  </a>
+                </div>
+              </div>
+              <div class="p-recommend-slider__custom-progress">
+                <span class="p-recommend-slider__custom-progress__current">1</span>
+                <div class="p-recommend-slider__custom-progress__bar">
+                  <div class="p-recommend-slider__custom-progress__fill"></div>
+                </div>
+                <span class="p-recommend-slider__custom-progress__total">5</span>
+              </div>
+              <div class="swiper-button-prev p-recommend-slider__swiper-button-prev">
+                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7299 6.59961H1.37988" stroke="white" stroke-width="1.01" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M10.3301 1.42969C10.3301 1.42969 10.9301 2.36969 12.6301 3.98969C14.3301 5.59969 17.3601 6.60969 17.3601 6.60969C17.3601 6.60969 14.3301 7.39969 12.6301 9.00969C10.9301 10.6197 10.3301 11.5697 10.3301 11.5697"
+                    stroke="white" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="swiper-button-next p-recommend-slider__swiper-button-next">
+                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7299 6.59961H1.37988" stroke="white" stroke-width="1.01" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M10.3301 1.42969C10.3301 1.42969 10.9301 2.36969 12.6301 3.98969C14.3301 5.59969 17.3601 6.60969 17.3601 6.60969C17.3601 6.60969 14.3301 7.39969 12.6301 9.00969C10.9301 10.6197 10.3301 11.5697 10.3301 11.5697"
+                    stroke="white" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-archive-btn p-works-slider__btn">
+          <a href="https://sabeevo.com/design" class="c-archive-btn__link">
+            <span class="c-archive-btn__link-text">お仕事一覧を見る</span>
+            <span class="c-archive-btn__link-box">
+              <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.7299 6.59961H1.37988" stroke="white" stroke-width="1.01" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M10.3301 1.42969C10.3301 1.42969 10.9301 2.36969 12.6301 3.98969C14.3301 5.59969 17.3601 6.60969 17.3601 6.60969C17.3601 6.60969 14.3301 7.39969 12.6301 9.00969C10.9301 10.6197 10.3301 11.5697 10.3301 11.5697"
+                  stroke="white" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>  
+    </section>
+ <div class="p-concept__btn">
+        <a href="https://reserva.be/tobari1111/" class="c-btn">
+          <span class="c-btn__text u-text__nowrap">館内見学ツアーの詳細はこちら</span>
+          <svg class="c-btn__icon" width="21" height="7" viewBox="0 0 21 7" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3.5H15" stroke="currentColor" />
+            <path d="M21 3.5L15 6.09808L15 0.901924L21 3.5Z" fill="currentColor" />
+          </svg>
+        </a>
+      </div>
+  </main>
+
+  <footer class="l-footer"></footer>
+
+  <!-- jsファイルの読み込み -->
+  <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+  <script type="module" src="./assets/js/main.js?ver1.0"></script>
+</body>
+
+</html>

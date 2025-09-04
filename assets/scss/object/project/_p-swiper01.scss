@@ -1,0 +1,378 @@
+@use "../../global" as *;
+
+.p-works-slider {
+  padding-block-start: 3.75rem;
+  background: #ffdb92;
+  overflow: hidden;
+  width: 100%;
+  padding-block: 0.625rem;
+  margin-block-start: -0.3125rem;
+}
+
+.p-works-slider__inner {
+  padding-inline: 2.5rem;
+  margin-inline: auto;
+  position: relative;
+  width: 100%;
+}
+
+.p-works-slide__container {
+  width: 100%;
+  position: relative;
+  padding-block: 4.375rem 3.375rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0rem;
+    right: calc(50% - 50vw);
+    width: calc(100% - 9.8125rem + 50vw - 50%);
+    height: calc(100% - 0rem);
+    background: #fff;
+    border-radius: 15rem 0 0 15rem;
+  }
+}
+
+.c-section__title--large {
+  font-size: max(2.9375rem, 37.6px);
+  font-weight: 700;
+  line-height: 1.1489361702;
+  letter-spacing: 0em;
+}
+
+.p-works-slider__main-title {
+  text-align: center;
+}
+
+
+.p-works-slider__side {
+  position: absolute;
+  top: 11.875rem;
+  left: -1.25rem;
+  flex-shrink: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.u-animation__jump {
+  animation: 5s 0s ease-in-out forwards infinite jumpIllust;
+}
+
+
+.u-animation__jump.--delay1 {
+  animation: 5s 1s ease-in-out forwards infinite jumpIllust;
+}
+
+@keyframes jumpIllust {
+  0% {
+    translate: 0;
+    scale: 1;
+  }
+
+  50% {
+    translate: 0 -5px;
+    scale: 1;
+  }
+
+  55% {
+    scale: 1.07;
+    translate: 0 -20px;
+  }
+
+  60% {
+    scale: 0.97;
+    translate: 0 0px;
+  }
+
+  65% {
+    scale: 1;
+    translate: 0;
+  }
+
+  100% {
+    scale: 1;
+    translate: 0;
+  }
+}
+
+.p-works-slider__illust {
+  width: 21rem;
+  height: auto;
+}
+
+
+.p-works-slider__main {
+  position: relative;
+  z-index: 2;
+  margin-inline-start: 22.875rem;
+  width: calc(100% + 50vw - 50%);
+}
+
+.p-works-slider__swiper-container {
+  height: 39.0625rem;
+  overflow: hidden;
+  padding-inline-start: 7.5rem;
+  position: relative;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.p-works-slider__swiper {
+  height: 37.1875rem;
+  overflow: visible;
+}
+
+.p-works-slider__swiper-wrapper {
+  align-items: center;
+}
+
+.p-works-slider__swiper-container,
+.p-works-slider__swiper,
+.p-works-slider__swiper-wrapper,
+.p-works-slider__swiper-slide {
+  position: relative;
+}
+
+.p-works-slider__swiper-slide {
+  display: block;
+  width: 19.125rem;
+  height: auto;
+  flex-shrink: 0;
+  margin-inline-end: 10rem;
+  transition: all 0.3s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+}
+
+.p-works-slider__swiper-slide.swiper-slide-active,
+.p-works-slider__swiper-slide.swiper-slide-duplicate-active {
+  scale: 1.6;
+}
+
+.p-works-slider__swiper-slide-img-wrap {
+  overflow: hidden;
+  border-radius: 2.5rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.p-works-slider__swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.p-works-slider__tag {
+  margin-block-start: 0.5rem;
+  font-size: max(0.546875rem, 7px);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0em;
+  font-size: 8.75px;
+  color: #aaaaaa;
+}
+
+.p-works-slider__title {
+  font-size: max(0.546875rem, 7px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0em;
+  font-size: 8.75px;
+  margin-block-start: 0.125rem;
+  color: rgb(49, 29, 15);
+}
+
+.p-works-slider__custom-progress,
+.p-recommend-slider__custom-progress {
+  position: absolute;
+  bottom: 0;
+  left: 1.875rem;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.p-works-slider__custom-progress__bar,
+.p-recommend-slider__custom-progress__bar {
+  position: relative;
+  top: unset;
+  left: unset;
+  width: 110px;
+  height: 2px;
+  background: #aaa;
+  overflow: hidden;
+}
+
+.p-recommend-slider__custom-progress__fill {
+  height: 100%;
+  width: 0%;
+  background: #311d0f;
+  transition: none;
+}
+
+// もともと入っている矢印を消す
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-button-prev.p-recommend-slider__swiper-button-prev svg,
+.swiper-button-next.p-works-slider__swiper-button-next svg,
+.swiper-button-next.p-recommend-slider__swiper-button-next svg {
+  width: 1.25rem;
+}
+
+.swiper-button-prev.p-recommend-slider__swiper-button-prev {
+  left: 0;
+  position: absolute;
+  width: 3.125rem;
+  height: 2.5rem;
+  background: #311d0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  translate: 0 calc(-50% - 3.125rem);
+  border-radius: 1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  transition: opacity 0.3s ease;
+}
+
+.swiper-button-next.p-recommend-slider__swiper-button-next {
+  position: absolute;
+  width: 3.125rem;
+  height: 2.5rem;
+  background: #311d0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  translate: 0 calc(-50% - 3.125rem);
+  border-radius: 1rem;
+}
+
+.swiper-button-prev.p-recommend-slider__swiper-button-prev svg {
+  rotate: 180deg;
+}
+
+.swiper-button-next.p-recommend-slider__swiper-button-next {
+  left: 30.625rem;
+}
+
+// ボタン位置調整
+.p-works-slider__btn {
+  position: absolute;
+  z-index: 3;
+  bottom: 3.125rem;
+  right: 2.5rem;
+}
+
+.c-archive-btn__link {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  white-space: nowrap;
+
+  @media(any-hover: hover) {
+    &:hover {
+      .c-archive-btn__link-box {
+        translate: 4px 0;
+      }
+    }
+  }
+}
+
+.c-archive-btn__link-text {
+  font-size: max(1.3125rem, 16.8px);
+  font-weight: 700;
+  line-height: 1.6666666667;
+  letter-spacing: 0em;
+}
+
+.c-archive-btn__link-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4dbe3d;
+  width: 2rem;
+  height: 1.5625rem;
+  border-radius: 0.5rem;
+  transition: translate 0.3s ease;
+}
+
+.c-archive-btn__link-box svg {
+  width: 0.75rem;
+  height: auto;
+}
+
+
+
+// svg矢印
+.p-concept__btn {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.c-btn {
+  display: inline-block;
+  padding-block: rm(27);
+  padding-inline: rm(85);
+  @include font(20, 23);
+  border: 1px solid $color-text;
+  transition: all 0.5s ease;
+
+  @include mq(sp) {
+    @include font(16, 16);
+    width: rm(346);
+    padding-inline: 0;
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  }
+}
+
+//svg矢印　色変更とアニメーション
+.c-btn__icon {
+  width: 1.6rem;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.c-btn:hover {
+  color: #fff;
+  /* ホバー時は白 */
+}
+
+.c-btn:hover .c-btn__icon {
+  transform: translateX(8px);
+  /* 矢印だけ右に動く */
+}

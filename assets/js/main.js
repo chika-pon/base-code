@@ -213,3 +213,74 @@ document.querySelectorAll(".scroll_wrap").forEach((wrap) => {
   });
 });
 
+
+//swiper01
+// Swiper インスタンスを保持
+const swiperInstances = {};
+
+// カスタムプログレスバー更新関数
+function updateRecommendProgress(swiper) {
+  const container = document.querySelector(".p-recommend-slider__custom-progress");
+  if (!container) return;
+
+  const fill = container.querySelector(".p-recommend-slider__custom-progress__fill");
+  const current = container.querySelector(".p-recommend-slider__custom-progress__current");
+  const total = container.querySelector(".p-recommend-slider__custom-progress__total");
+
+  if (current && total) {
+    current.textContent = swiper.realIndex + 1;
+    total.textContent = swiper.slides.length - swiper.loopedSlides * 2;
+  }
+
+  if (fill) {
+    fill.style.transition = "none";
+    fill.style.width = "0%";
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        fill.style.transition = "width 3s linear";
+        fill.style.width = "100%";
+      });
+    });
+  }
+}
+
+// recommend スライダー初期化
+function initRecommendSwiper() {
+  const selector = ".js-swiper-recommend";
+  const container = document.querySelector(selector);
+  if (!container) return;
+
+  // すでに初期化済みならスキップ
+  if (swiperInstances["recommend"]) return;
+
+  const swiper = new Swiper(selector, {
+    speed: 1000,
+    effect: "slide",
+    allowTouchMove: true,
+    loop: true,
+    centeredSlides: false,
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      prevEl: ".p-recommend-slider__swiper-button-prev",
+      nextEl: ".p-recommend-slider__swiper-button-next",
+    },
+    on: {
+      init: (swiper) => updateRecommendProgress(swiper),
+      slideChange: (swiper) => updateRecommendProgress(swiper),
+    },
+  });
+
+  container.swiper = swiper;
+  swiperInstances["recommend"] = swiper;
+}
+
+// ページロードで初期化
+window.addEventListener("load", () => {
+  initRecommendSwiper();
+});
+
